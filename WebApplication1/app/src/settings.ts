@@ -2,5 +2,6 @@
     serviceName: "/breeze",
     saveChangesUrl: "data/savechanges",
     itemsUrl: "data/items",
-    pageSize: 5,
+    driversUrl: "data/drivers",
+    pageSize: 10,
 };

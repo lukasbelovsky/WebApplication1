@@ -3,7 +3,7 @@ import {inject} from 'aurelia-framework';
 import {EntityManagerFactory} from '../entity-manager-factory';
 
 @inject(EntityManagerFactory)
-export class ItemService {
+export class DriverService {
     em: breeze.EntityManager;
     emFactory: EntityManagerFactory;
 
@@ -26,8 +26,8 @@ export class ItemService {
     getPage(pageIndex) {
         var query = new breeze.EntityQuery;
         query = query
-            .from(settings.itemsUrl)
-            .orderBy('Brand')
+            .from(settings.driversUrl)
+            .orderBy('LastName')
             .skip(pageIndex * settings.pageSize)
             .take(settings.pageSize)
             .inlineCount();
@@ -43,12 +43,12 @@ export class ItemService {
     }
 
     loadExisting(id) {
-        var itemQuery = new breeze.EntityQuery()
-            .from(settings.itemsUrl)
+        var driverQuery = new breeze.EntityQuery()
+            .from(settings.driversUrl)
             .where('Id', '==', id);
 
         return this.getEntityManager()
-            .then(em => em.executeQuery(itemQuery))
+            .then(em => em.executeQuery(driverQuery))
             .then(queryResult => {
                 return {
                     entity: queryResult.results[0],
@@ -60,7 +60,7 @@ export class ItemService {
     createNew() {
         return this.getEntityManager()
             .then(em => {
-                var entity = em.createEntity('Item', { Id: breeze.core.getUuid() });
+                var entity = em.createEntity('Driver', { Id: breeze.core.getUuid() });
                 return {
                     entity: entity,
                     entityManager: em

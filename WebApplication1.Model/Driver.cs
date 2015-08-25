@@ -25,6 +25,6 @@ namespace WebApplication1.Model
 
         [DataMember]
         [Required]
-        public DateTime DateOfBirth { get; set; }
+        public string DateOfBirth { get; set; }
     }
 }

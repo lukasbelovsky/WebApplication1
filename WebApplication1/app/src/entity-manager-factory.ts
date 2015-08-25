@@ -31,6 +31,11 @@ export class EntityManagerFactory {
     }
 
     private buildModel(store) {
+        this.buildItemModel(store);
+        this.buildDriverModel(store);
+    }
+
+    private buildItemModel(store) {
         var self = this;
         var itemCtor = function () {
         };
@@ -39,6 +44,17 @@ export class EntityManagerFactory {
         };
 
         store.registerEntityTypeCtor('Item', itemCtor, itemInitializer);
+    }
+
+    private buildDriverModel(store) {
+        var self = this;
+        var driverCtor = function () {
+        };
+        var driverInitializer = function (driver) {
+            driver.validation = self.validation.onBreezeEntity(driver);
+        };
+
+        store.registerEntityTypeCtor('Driver', driverCtor, driverInitializer);
     }
 
     private logChanges(data) {

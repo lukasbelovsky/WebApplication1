@@ -168,6 +168,9 @@
     <Content Include="app\index.html" />
     <Content Include="app\src\app.html" />
     <Content Include="app\src\childrouter.html" />
+    <Content Include="app\src\drivers\driver-list.html" />
+    <Content Include="app\src\drivers\driver.html" />
+    <Content Include="app\src\drivers\drivers-section.html" />
     <Content Include="app\src\entity-header.html" />
     <Content Include="app\src\items\item-list.html" />
     <Content Include="app\src\items\item.html" />
@@ -219,6 +222,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app\src\drivers\driver-list.ts" />
+    <TypeScriptCompile Include="app\src\drivers\driver-service.ts" />
+    <TypeScriptCompile Include="app\src\drivers\driver.ts" />
+    <TypeScriptCompile Include="app\src\drivers\drivers-section.ts" />
     <TypeScriptCompile Include="app\src\entity-manager-factory.ts" />
     <TypeScriptCompile Include="app\src\entity-view-model.ts" />
     <TypeScriptCompile Include="app\src\items\item-list.ts" />
@@ -300,7 +307,8 @@
   <PropertyGroup>
     <PostBuildEvent>COPY  "$(ProjectDir)app\src\*.html" "$(ProjectDir)app\dist"
 COPY  "$(ProjectDir)app\src\resources\*.html" "$(ProjectDir)app\dist\resources"
-COPY  "$(ProjectDir)app\src\items\*.html" "$(ProjectDir)app\dist\items"</PostBuildEvent>
+COPY  "$(ProjectDir)app\src\items\*.html" "$(ProjectDir)app\dist\items"
+COPY  "$(ProjectDir)app\src\drivers\*.html" "$(ProjectDir)app\dist\drivers"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

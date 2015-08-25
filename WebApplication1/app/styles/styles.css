@@ -135,8 +135,14 @@ table thead tr th {
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
     background-color: #002450 !important;
 }
-table thead tr th:nth-child(1), table thead tr th:nth-child(2) {
+#items table thead tr th:nth-child(1), table thead tr th:nth-child(2) {
     width: 400px !important;
+}
+#drivers table thead tr th {
+    width: 200px !important;
+}
+.table > tbody + tbody {
+    border: none !important;
 }
 .table>tbody>tr>td {
     vertical-align: middle !important;
@@ -147,11 +153,11 @@ table thead tr th:nth-child(1), table thead tr th:nth-child(2) {
 body > div > router-view > section > div > table > tbody > tr{
     border: none;
 }
-body > div > router-view > section > div > table > tbody > tr > td:nth-child(1), body > div > router-view > section > div > table > tbody > tr > td:nth-child(2) {
+.table-bordered > tbody > tr > td{
     border: 1.5px solid #1B409A !important;
 }
 .table {
-    width: auto !important;
+    width: 800px !important;
     margin: auto !important;
     margin-top: 30px !important;
 }
@@ -167,9 +173,13 @@ body > div > table > tbody > tr > td:nth-child(3) {
 .table-bordered {
     border-color: transparent !important;
 }
-.table > tbody + tbody {
-    border: none !important;
-}
 .cursor-pointer {
     cursor:pointer;
+}
+.message{
+    font-size:small;
+    font-weight:400;
+}
+.whirly-loader{
+    margin-top: 35px;
 }

@@ -77,6 +77,10 @@
     <Compile Include="Migrations\201508251116345_addDriver.Designer.cs">
       <DependentUpon>201508251116345_addDriver.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201508251219526_addDriver1.cs" />
+    <Compile Include="Migrations\201508251219526_addDriver1.Designer.cs">
+      <DependentUpon>201508251219526_addDriver1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Repository.cs" />
@@ -104,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201508251116345_addDriver.resx">
       <DependentUpon>201508251116345_addDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508251219526_addDriver1.resx">
+      <DependentUpon>201508251219526_addDriver1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
