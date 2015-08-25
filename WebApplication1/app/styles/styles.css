@@ -1,0 +1,175 @@
+﻿body {
+  margin: 0;
+}
+
+.splash {
+    text-align: center;
+    margin: 10% 0 0 0;
+    box-sizing: border-box;
+}
+
+.splash .message {
+    font-size: 72px;
+    line-height: 72px;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 0 15px;
+    text-transform: uppercase;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.splash .fa-spinner {
+    text-align: center;
+    display: inline-block;
+    font-size: 72px;
+    margin-top: 50px;
+}
+
+.page-host {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media print
+{
+  .page-host {
+    position: absolute;
+    left: 10px;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    overflow-y: inherit;
+    overflow-x: inherit;
+  }
+}
+
+section {
+    margin: 0 20px;
+}
+
+.navbar-nav li.loader {
+    margin: 12px 24px 0 6px;
+}
+
+/* animate page transitions */
+section.au-enter-active {
+  -webkit-animation: fadeInRight 1s;
+  animation: fadeInRight 1s;
+}
+
+div.au-stagger {
+  /* 50ms will be applied between each successive enter operation */
+  -webkit-animation-delay:50ms;
+  animation-delay:50ms;
+}
+
+
+/* animation definitions */
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0)
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0)
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none
+  }
+}
+
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+table thead tr th {
+    font-weight:bold;
+}
+.table>thead:first-child>tr:first-child>th {
+    border: 2px solid #1A1065 !important;
+}
+.navbar-inverse {
+    background-color: #000033 !important;
+    border: none !important;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #B5D3FF !important;
+}
+.navbar-inverse .navbar-nav > .active > a{
+    background-color: #FFFFFF !important;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+    background-color: #002450 !important;
+}
+table thead tr th:nth-child(1), table thead tr th:nth-child(2) {
+    width: 400px !important;
+}
+.table>tbody>tr>td {
+    vertical-align: middle !important;
+}
+.table>tbody>tr.active>td{
+    background-color:#D1D2D8 !important;
+}
+body > div > router-view > section > div > table > tbody > tr{
+    border: none;
+}
+body > div > router-view > section > div > table > tbody > tr > td:nth-child(1), body > div > router-view > section > div > table > tbody > tr > td:nth-child(2) {
+    border: 1.5px solid #1B409A !important;
+}
+.table {
+    width: auto !important;
+    margin: auto !important;
+    margin-top: 30px !important;
+}
+body > div > table > tbody > tr > td:nth-child(3) > a {
+    margin: auto !important;
+    padding: 4px 8px !important;
+    color: #1A1065 !important;
+    border-color: #1B409A !important;
+}
+body > div > table > tbody > tr > td:nth-child(3) {
+    border-color: transparent !important;
+}
+.table-bordered {
+    border-color: transparent !important;
+}
+.table > tbody + tbody {
+    border: none !important;
+}
+.cursor-pointer {
+    cursor:pointer;
+}

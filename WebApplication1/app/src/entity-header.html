@@ -1,0 +1,19 @@
+﻿<template>
+    <div class="row">
+        <div class="col m8 no-padding">
+            <h3 class="left">${title}</h3>
+        </div>
+        <div class="col m4">
+            <button type="submit" class="btn btn-success"
+                    disabled.one-way="!hasChanges || entity.validation.isValidating">
+                Save
+            </button>
+            <button type="button" class="btn btn-warning"
+                    disabled.one-way="entity.validation.isValidating"
+                    click.delegate="cancel()">
+                Cancel
+            </button>
+            
+        </div>
+    </div>
+</template>

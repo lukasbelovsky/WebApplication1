@@ -1,0 +1,17 @@
+﻿<template>
+    <ul class="pagination" show.bind="pageCount > 1">
+        <li>
+            <a href="#" aria-label="Previous" click.delegate="setPage(pageIndex - 1)" class="btn ${pageIndex == 0 ? 'disabled' : ''}">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li repeat.for="p of pageCount" class="${p === $parent.pageIndex ? 'active' : ''}">
+            <a href="#" click.delegate="$parent.setPage(p)">${p + 1}</a>
+        </li>
+        <li>
+            <a href="#" aria-label="Next" click.delegate="setPage(pageIndex + 1)" class="btn ${pageIndex + 1 == pageCount ? 'disabled' : ''}">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</template>
