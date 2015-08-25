@@ -226,9 +226,7 @@
     <TypeScriptCompile Include="app\src\items\item-service.ts" />
     <TypeScriptCompile Include="app\src\items\item.ts" />
     <TypeScriptCompile Include="app\src\list-view-model.ts" />
-    <TypeScriptCompile Include="app\src\resources\date-format.ts" />
     <TypeScriptCompile Include="app\src\resources\index.ts" />
-    <TypeScriptCompile Include="app\src\resources\number-format.ts" />
     <TypeScriptCompile Include="app\src\app.ts" />
     <TypeScriptCompile Include="app\src\childrouter.ts" />
     <TypeScriptCompile Include="app\src\main.ts" />

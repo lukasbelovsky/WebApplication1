@@ -13,7 +13,7 @@ export class App {
             config.map([
                 { route: ['', 'welcome'], name: 'welcome', moduleId: 'welcome', nav: true, title: 'Welcome' },
                 { route: 'items',name: 'items', moduleId: 'items/items-section', nav: true, title: 'Our Items' },
-                { route: 'childrouter', name: 'childrouter', moduleId: 'childrouter', nav: true, title: 'Child Router' },
+                { route: 'childrouter', name: 'childrouter', moduleId: 'childrouter', nav: true, title: 'Site Nav' },
             ]);
         });
     }

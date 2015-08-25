@@ -30,5 +30,11 @@ namespace WebApplication1.Controllers
         {
             return unitOfWork.ItemRepository.All();
         }
+
+        [HttpGet]
+        public IQueryable<Driver> Drivers()
+        {
+            return unitOfWork.DriverRepository.All();
+        }
     }
 }

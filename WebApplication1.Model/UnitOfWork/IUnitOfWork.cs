@@ -7,6 +7,7 @@ namespace WebApplication1.Model.UnitOfWork
     public interface IUnitOfWork
     {
         IRepository<Item> ItemRepository { get; }
+        IRepository<Driver> DriverRepository { get; }
 
         void Commit();
 

@@ -16,5 +16,6 @@ namespace WebApplication1.Data
         }
 
         public DbSet<Item> Items { get; set; }
+        public DbSet<Driver> Drivers { get; set; }
     }
 }

@@ -20,9 +20,12 @@ namespace WebApplication1.Data.UnitOfWork
             breezeSavePipeline.CurrentContextProvider = contextProvider;
 
             ItemRepository = new Repository<Item>(contextProvider.Context);
+            DriverRepository = new Repository<Driver>(contextProvider.Context);
+
         }
 
         public IRepository<Item> ItemRepository { get; private set; }
+        public IRepository<Driver> DriverRepository { get; private set; }
 
         public void Commit()
         {
@@ -40,5 +43,8 @@ namespace WebApplication1.Data.UnitOfWork
 
             return contextProvider.SaveChanges(changeSet, transactionSettings);
         }
+
+
+        
     }
 }
