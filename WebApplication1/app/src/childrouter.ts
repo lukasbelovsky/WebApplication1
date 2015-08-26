@@ -9,7 +9,7 @@ export class ChildRouter {
     configureRouter(config, router) {
         config.map([
             { route: ['', 'welcome'], name: 'welcome', moduleId: 'welcome', nav: true, title: 'Welcome' },
-            { route: 'items', name: 'items', moduleId: 'items/items-section', nav: true, title: 'Our Items' },
+            { route: 'items', name: 'items', moduleId: 'items/items-section', nav: true, title: 'Our Cars' },
             { route: 'drivers', name: 'drivers', moduleId: 'drivers/drivers-section', nav: true, title: 'Our Drivers' }
         ]);
 

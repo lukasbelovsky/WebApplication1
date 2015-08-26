@@ -121,17 +121,26 @@ table thead tr th {
     border: 2px solid #1A1065 !important;
 }
 .navbar-inverse {
-    background-color: #000033 !important;
+    background-color: #000049 !important;
     border: none !important;
+    font-weight: 600;
 }
 .navbar-inverse .navbar-nav>li>a {
-    color: #B5D3FF !important;
+    color: #E5EBF4 !important;
 }
 .navbar-inverse .navbar-nav > .active > a{
     background-color: #FFFFFF !important;
+    color: #000049 !important;
 }
-.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
-    background-color: #002450 !important;
+.navbar-inverse .navbar-nav > li > a:hover{
+    background-color: #DFE5EE !important;
+    color: #000049 !important;
+}
+.navbar-toggle{
+    border: none !important;
+}
+.navbar-toggle:hover, .navbar-toggle:focus{
+    background-color: #6060B4 !important;
 }
 #items table thead tr th:nth-child(1), table thead tr th:nth-child(2) {
     width: 400px !important;
