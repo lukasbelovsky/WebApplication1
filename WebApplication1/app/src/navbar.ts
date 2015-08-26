@@ -3,8 +3,10 @@
 export class NavBar {
     @bindable router = null;
     attached(){
-        $('.nav a').on('click', function () {
-            $(".navbar-toggle").click();
+        $('.nav a:not(.dropdown-toggle)').on('click', function () {
+            if ($('.navbar-toggle').css('display') != 'none') {
+                $(".navbar-toggle").trigger("click");
+            }
         });
     }
 }

@@ -9,19 +9,17 @@
 }
 
 .splash .message {
-    font-size: 72px;
-    line-height: 72px;
+    font-size: 50px;
+    line-height: 94px;
     text-shadow: rgba(0, 0, 0, 0.5) 0 0 15px;
     text-transform: uppercase;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.splash .fa-spinner {
-    text-align: center;
-    display: inline-block;
-    font-size: 72px;
-    margin-top: 50px;
+.splash .whirly-loader{
+    margin-top: 35px;
 }
+
 
 .page-host {
     position: absolute;
@@ -157,7 +155,8 @@ body > div > router-view > section > div > table > tbody > tr{
     border: 1.5px solid #1B409A !important;
 }
 .table {
-    width: 800px !important;
+    width: auto !important;
+    max-width: 800px !important;
     margin: auto !important;
     margin-top: 30px !important;
 }
@@ -179,7 +178,4 @@ body > div > table > tbody > tr > td:nth-child(3) {
 .message{
     font-size:small;
     font-weight:400;
-}
-.whirly-loader{
-    margin-top: 35px;
 }

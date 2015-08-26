@@ -1,5 +1,4 @@
-﻿import 'numeral';
-
+import 'numeral';
 export class NumberFormatValueConverter {
     toView(value, format) {
         if (value === null || value === undefined || isNaN(value)) {
@@ -7,4 +6,5 @@ export class NumberFormatValueConverter {
         }
         return numeral(value).format(format);
     }
-} 
+}
+//# sourceMappingURL=number-format.js.map
