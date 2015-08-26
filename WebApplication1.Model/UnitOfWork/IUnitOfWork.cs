@@ -8,6 +8,7 @@ namespace WebApplication1.Model.UnitOfWork
     {
         IRepository<Item> ItemRepository { get; }
         IRepository<Driver> DriverRepository { get; }
+        IRepository<ZIP> ZipRepository { get; }
 
         void Commit();
 

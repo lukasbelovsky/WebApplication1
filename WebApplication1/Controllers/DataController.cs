@@ -36,5 +36,11 @@ namespace WebApplication1.Controllers
         {
             return unitOfWork.DriverRepository.All();
         }
+
+        [HttpGet]
+        public IQueryable<ZIP> Zips()
+        {
+            return unitOfWork.ZipRepository.All();
+        }
     }
 }

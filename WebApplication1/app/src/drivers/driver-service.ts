@@ -28,6 +28,7 @@ export class DriverService {
         query = query
             .from(settings.driversUrl)
             .orderBy('LastName')
+            .expand('Zip')
             .skip(pageIndex * settings.pageSize)
             .take(settings.pageSize)
             .inlineCount();
@@ -65,6 +66,21 @@ export class DriverService {
                     entity: entity,
                     entityManager: em
                 }
+            });
+    }
+
+    loadZips() {
+        var query = new breeze.EntityQuery;
+        query = query
+            .from(settings.zipsUrl)
+            .orderBy('Code');
+
+        return this.getEntityManager()
+            .then(em => em.executeQuery(query))
+            .then(queryResult => {
+                return {
+                    entities: queryResult.results
+                };
             });
     }
 }

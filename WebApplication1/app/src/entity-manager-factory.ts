@@ -33,6 +33,8 @@ export class EntityManagerFactory {
     private buildModel(store) {
         this.buildItemModel(store);
         this.buildDriverModel(store);
+        this.buildZipModel(store);
+
     }
 
     private buildItemModel(store) {
@@ -55,6 +57,17 @@ export class EntityManagerFactory {
         };
 
         store.registerEntityTypeCtor('Driver', driverCtor, driverInitializer);
+    }
+
+    private buildZipModel(store) {
+        var self = this;
+        var zipCtor = function () {
+        };
+        var zipInitializer = function (zip) {
+            zip.validation = self.validation.onBreezeEntity(zip);
+        };
+
+        store.registerEntityTypeCtor('ZIP', zipCtor, zipInitializer);
     }
 
     private logChanges(data) {

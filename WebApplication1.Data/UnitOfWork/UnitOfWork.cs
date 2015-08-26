@@ -21,11 +21,13 @@ namespace WebApplication1.Data.UnitOfWork
 
             ItemRepository = new Repository<Item>(contextProvider.Context);
             DriverRepository = new Repository<Driver>(contextProvider.Context);
+            ZipRepository = new Repository<ZIP>(contextProvider.Context);
 
         }
 
         public IRepository<Item> ItemRepository { get; private set; }
         public IRepository<Driver> DriverRepository { get; private set; }
+        public IRepository<ZIP> ZipRepository { get; private set; }
 
         public void Commit()
         {

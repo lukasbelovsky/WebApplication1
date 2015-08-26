@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 
 namespace WebApplication1.Model
@@ -26,5 +27,12 @@ namespace WebApplication1.Model
         [DataMember]
         [Required]
         public string DateOfBirth { get; set; }
+
+        [DataMember]
+        public Guid? ZipId { get; set; }
+
+        [DataMember]
+        [ForeignKey("ZipId")]
+        public ZIP Zip { get; set; }
     }
 }
