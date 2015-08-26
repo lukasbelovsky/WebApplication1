@@ -1,6 +1,7 @@
 ﻿import settings from './settings';
 import {inject} from 'aurelia-framework';
 import {Validation} from 'aurelia-validation';
+import {declarePropertyDependencies} from 'aurelia-framework';
 
 @inject(Validation)
 export class EntityManagerFactory {
@@ -54,6 +55,9 @@ export class EntityManagerFactory {
         };
         var driverInitializer = function (driver) {
             driver.validation = self.validation.onBreezeEntity(driver);
+            Object.defineProperty(driver, 'displayQualified', {
+                get: function () { return this.Qualified ? 'Ano' : 'Ne'; }
+            });
         };
 
         store.registerEntityTypeCtor('Driver', driverCtor, driverInitializer);

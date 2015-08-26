@@ -14,8 +14,10 @@
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>City</th>
-                        <th>Date of Birth</th>
                         <th>ZIP</th>
+                        <th>Date of Birth</th>
+                        <th>Qualified</th>
+                        <!--<th>QualifiedGlyph</th>-->
                     </tr>
                 </thead>
                 <tbody class="cursor-pointer">
@@ -23,8 +25,14 @@
                         <td>${entity.FirstName}</td>
                         <td>${entity.LastName}</td>
                         <td>${entity.City}</td>
-                        <td>${entity.DateOfBirth}</td>
                         <td>${entity.Zip.Code}</td>
+                        <td>${entity.DateOfBirth}</td>
+                        <!--<td>${entity.displayQualified}</td>-->
+
+                        <td>
+                            <span if.bind="entity.Qualified" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                            <span if.bind="!entity.Qualified" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </td>
                     </tr>
                 </tbody>
             </table>

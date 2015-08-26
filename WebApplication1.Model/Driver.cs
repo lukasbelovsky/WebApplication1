@@ -34,5 +34,9 @@ namespace WebApplication1.Model
         [DataMember]
         [ForeignKey("ZipId")]
         public ZIP Zip { get; set; }
+
+        [DataMember]
+        [Required]
+        public bool Qualified { get; set; }
     }
 }

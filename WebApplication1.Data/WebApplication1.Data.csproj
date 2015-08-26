@@ -85,6 +85,10 @@
     <Compile Include="Migrations\201508261111490_AddZip.Designer.cs">
       <DependentUpon>201508261111490_AddZip.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201508261316051_AddQualified.cs" />
+    <Compile Include="Migrations\201508261316051_AddQualified.Designer.cs">
+      <DependentUpon>201508261316051_AddQualified.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Repository.cs" />
@@ -118,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201508261111490_AddZip.resx">
       <DependentUpon>201508261111490_AddZip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508261316051_AddQualified.resx">
+      <DependentUpon>201508261316051_AddQualified.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
