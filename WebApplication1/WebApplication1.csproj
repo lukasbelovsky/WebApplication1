@@ -238,6 +238,8 @@
     <TypeScriptCompile Include="app\src\childrouter.ts" />
     <TypeScriptCompile Include="app\src\main.ts" />
     <TypeScriptCompile Include="app\src\navbar.ts" />
+    <TypeScriptCompile Include="app\src\resources\orderBy.ts" />
+    <TypeScriptCompile Include="app\src\resources\orderByDirection.ts" />
     <TypeScriptCompile Include="app\src\resources\pager.ts" />
     <TypeScriptCompile Include="app\src\settings.ts" />
     <TypeScriptCompile Include="app\src\welcome.ts" />

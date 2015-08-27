@@ -7,6 +7,6 @@ import {ItemService} from './item-service';
 @singleton()
 export class ItemList extends ListViewModel {
     constructor(router, service) {
-        super('items', router, service)
+        super('items', router, service, 'Brand')
     }
 } 

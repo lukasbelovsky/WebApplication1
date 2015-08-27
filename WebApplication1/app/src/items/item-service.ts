@@ -23,11 +23,11 @@ export class ItemService {
         }
     }
 
-    getPage(pageIndex) {
+    getPage(pageIndex, orderBy) {
         var query = new breeze.EntityQuery;
         query = query
             .from(settings.itemsUrl)
-            .orderBy('Brand')
+            .orderBy(orderBy)
             .skip(pageIndex * settings.pageSize)
             .take(settings.pageSize)
             .inlineCount();

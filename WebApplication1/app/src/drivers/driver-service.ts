@@ -23,11 +23,11 @@ export class DriverService {
         }
     }
 
-    getPage(pageIndex) {
+    getPage(pageIndex, orderBy) {
         var query = new breeze.EntityQuery;
         query = query
             .from(settings.driversUrl)
-            .orderBy('LastName')
+            .orderBy(orderBy)
             .expand('Zip')
             .skip(pageIndex * settings.pageSize)
             .take(settings.pageSize)

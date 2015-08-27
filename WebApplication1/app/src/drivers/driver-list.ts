@@ -7,6 +7,6 @@ import {DriverService} from './driver-service';
 @singleton()
 export class DriverList extends ListViewModel {
     constructor(router, service) {
-        super('drivers', router, service)
+        super('drivers', router, service, 'FirstName')
     }
 } 

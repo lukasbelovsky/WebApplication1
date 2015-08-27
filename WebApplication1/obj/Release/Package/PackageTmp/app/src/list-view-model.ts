@@ -1,7 +1,4 @@
 ﻿import settings from './settings';
-import OrderBy from './resources/orderBy';
-import {OrderByDirection} from './resources/orderByDirection';
-
 
 export class ListViewModel {
     router;
@@ -13,13 +10,11 @@ export class ListViewModel {
     pageIndex = 0;
     isLoading = false;
     selectedItem;
-    orderBy: OrderBy;
 
-    constructor(route, router, service, orderByValue) {
+    constructor(route, router, service) {
         this.route = route;
         this.router = router;
         this.service = service;
-        this.orderBy = new OrderBy(orderByValue);
     }
 
     activate() {
@@ -28,22 +23,12 @@ export class ListViewModel {
 
     load() {
         this.isLoading = true;
-        this.service.getPage(this.pageIndex, this.orderBy.toString())
+        this.service.getPage(this.pageIndex)
             .then(result => {
                 this.entities = result.entities;
                 this.pageCount = result.pageCount;
                 this.isLoading = false;
             });
-    }
-
-    changeOrderBy(value) {
-        if (this.orderBy.value == value) {
-            this.orderBy.direction = (this.orderBy.direction == OrderByDirection.ASC) ? OrderByDirection.DESC : OrderByDirection.ASC;
-        } else {
-            this.orderBy.value = value;
-            this.orderBy.direction = OrderByDirection.ASC;
-        }
-        this.load();
     }
 
     setPage(index) {

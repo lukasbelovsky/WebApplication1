@@ -116,6 +116,7 @@ div.au-stagger {
 
 table thead tr th {
     font-weight:bold;
+    min-width: 105px;
 }
 .table>thead:first-child>tr:first-child>th {
     border: 2px solid #1A1065 !important;
@@ -178,8 +179,9 @@ body > div > table > tbody > tr > td:nth-child(3) > a {
 body > div > table > tbody > tr > td:nth-child(3) {
     border-color: transparent !important;
 }
-.table-bordered {
+table table-bordered thead {
     border-color: transparent !important;
+    overflow-x: scroll !important;
 }
 .cursor-pointer {
     cursor:pointer;
