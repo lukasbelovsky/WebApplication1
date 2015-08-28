@@ -170,6 +170,18 @@ body > div > router-view > section > div > table > tbody > tr{
     margin: auto !important;
     margin-top: 30px !important;
 }
+.order{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap
+}
+.order a{
+    color: #000049;
+    float: none;
+    display: inline-block;
+    white-space: normal;
+    vertical-align: top;
+}
 body > div > table > tbody > tr > td:nth-child(3) > a {
     margin: auto !important;
     padding: 4px 8px !important;
@@ -181,7 +193,6 @@ body > div > table > tbody > tr > td:nth-child(3) {
 }
 table table-bordered thead {
     border-color: transparent !important;
-    overflow-x: scroll !important;
 }
 .cursor-pointer {
     cursor:pointer;
@@ -189,4 +200,7 @@ table table-bordered thead {
 .message{
     font-size:small;
     font-weight:400;
+}
+.commandBar{
+    width: 300px;
 }

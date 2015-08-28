@@ -14,12 +14,14 @@ export class ListViewModel {
     isLoading = false;
     selectedItem;
     orderBy: OrderBy;
+    _search: string;
 
     constructor(route, router, service, orderByValue) {
         this.route = route;
         this.router = router;
         this.service = service;
         this.orderBy = new OrderBy(orderByValue);
+        this.search = null;
     }
 
     activate() {
@@ -28,7 +30,7 @@ export class ListViewModel {
 
     load() {
         this.isLoading = true;
-        this.service.getPage(this.pageIndex, this.orderBy.toString())
+        this.service.getPage(this.pageIndex, this.orderBy.toString(), this.search)
             .then(result => {
                 this.entities = result.entities;
                 this.pageCount = result.pageCount;
@@ -44,6 +46,14 @@ export class ListViewModel {
             this.orderBy.direction = OrderByDirection.ASC;
         }
         this.load();
+    }
+
+    set search(value: string) {
+        this._search = value;
+        this.load();
+    }
+    get search():string {
+        return this._search;
     }
 
     setPage(index) {

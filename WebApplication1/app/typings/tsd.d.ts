@@ -23,3 +23,4 @@
 /// <reference path="jquery/jquery.d.ts" />
 /// <reference path="breeze/breeze.d.ts" />
 /// <reference path="aurelia/aurelia-validaton.d.ts" />
+/// <reference path="aurelia/aurelia-http-client.d.ts" />

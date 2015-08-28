@@ -9,7 +9,7 @@ using WebApplication1.Model.UnitOfWork;
 namespace WebApplication1.Controllers
 {
     [BreezeController]
-    [AllowAnonymous]
+    [Authorize]
     public class DataController : ApiController
     {
         private IUnitOfWork unitOfWork;

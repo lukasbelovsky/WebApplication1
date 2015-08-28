@@ -185,8 +185,10 @@
   <ItemGroup>
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\DataController.cs" />
     <Compile Include="Controllers\MetadataController.cs" />
+    <Compile Include="Models\SignInModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -209,7 +211,6 @@
   <ItemGroup>
     <Folder Include="app\dist\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebApplication1.Data\WebApplication1.Data.csproj">
@@ -241,6 +242,7 @@
     <TypeScriptCompile Include="app\src\resources\orderBy.ts" />
     <TypeScriptCompile Include="app\src\resources\orderByDirection.ts" />
     <TypeScriptCompile Include="app\src\resources\pager.ts" />
+    <TypeScriptCompile Include="app\src\resources\security.ts" />
     <TypeScriptCompile Include="app\src\settings.ts" />
     <TypeScriptCompile Include="app\src\welcome.ts" />
     <TypeScriptCompile Include="app\typings\aurelia\aurelia-binding.d.ts" />
@@ -250,6 +252,7 @@
     <TypeScriptCompile Include="app\typings\aurelia\aurelia-framework.d.ts" />
     <TypeScriptCompile Include="app\typings\aurelia\aurelia-history-browser.d.ts" />
     <TypeScriptCompile Include="app\typings\aurelia\aurelia-history.d.ts" />
+    <TypeScriptCompile Include="app\typings\aurelia\aurelia-http-client.d.ts" />
     <TypeScriptCompile Include="app\typings\aurelia\aurelia-loader-default.d.ts" />
     <TypeScriptCompile Include="app\typings\aurelia\aurelia-loader.d.ts" />
     <TypeScriptCompile Include="app\typings\aurelia\aurelia-logging-console.d.ts" />

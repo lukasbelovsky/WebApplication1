@@ -20,6 +20,7 @@ System.config({
     "aurelia-fetch-client": "github:aurelia/fetch-client@0.1.2",
     "aurelia-framework": "github:aurelia/framework@0.15.0",
     "aurelia-validation": "github:aurelia/validation@0.2.8",
+    "aurelia-http-client": "github:aurelia/http-client@0.10.3",
     "babel": "npm:babel-core@5.8.22",
     "babel-runtime": "npm:babel-runtime@5.8.20",
     "bootstrap": "github:twbs/bootstrap@3.3.5",

@@ -23,15 +23,34 @@ export class DriverService {
         }
     }
 
-    getPage(pageIndex, orderBy) {
+    getPage(pageIndex, orderBy, search) {
         var query = new breeze.EntityQuery;
-        query = query
-            .from(settings.driversUrl)
-            .orderBy(orderBy)
-            .expand('Zip')
-            .skip(pageIndex * settings.pageSize)
-            .take(settings.pageSize)
-            .inlineCount();
+        
+        
+        if (search) {
+            var Predicate = breeze.Predicate;
+            var multiSearch = Predicate
+                .create('FirstName', breeze.FilterQueryOp.Contains, search)
+                .or('LastName', breeze.FilterQueryOp.Contains, search)
+                .or('City', breeze.FilterQueryOp.Contains, search)
+                .or('Zip.Code', breeze.FilterQueryOp.Contains, search)
+            query = query
+                .from(settings.driversUrl)
+                .where(multiSearch)
+                .orderBy(orderBy)
+                .expand('Zip')
+                .skip(pageIndex * settings.pageSize)
+                .take(settings.pageSize)
+                .inlineCount();
+        } else {
+            query = query
+                .from(settings.driversUrl)
+                .orderBy(orderBy)
+                .expand('Zip')
+                .skip(pageIndex * settings.pageSize)
+                .take(settings.pageSize)
+                .inlineCount();
+        }
 
         return this.getEntityManager()
             .then(em => em.executeQuery(query))
