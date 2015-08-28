@@ -3,7 +3,7 @@ import {inject} from 'aurelia-framework';
 
 @inject(Security)
 export class Welcome {
-    heading = 'Welcome to Cars, inc. database managment client.';
+    heading = 'Welcome to Cars, inc. database management client.';
     firstName = '';
     lastName = '';
     security;

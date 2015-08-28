@@ -307,6 +307,8 @@
     <TypeScriptOutDir>C:\Users\Lukas\Documents\Visual Studio 2013\Projects\WebApplication1\WebApplication1\app\dist</TypeScriptOutDir>
     <TypeScriptExperimentalDecorators>True</TypeScriptExperimentalDecorators>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />

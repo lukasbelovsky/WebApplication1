@@ -204,3 +204,6 @@ table table-bordered thead {
 .commandBar{
     width: 300px;
 }
+.loader{
+    color:white !important;
+}

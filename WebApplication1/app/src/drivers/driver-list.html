@@ -11,6 +11,7 @@
                 </div>
                 <input type="text" value.bind="search" class="form-control" placeholder="Search for...">
             </div>
+            <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead class="order">
                         <tr>
@@ -36,9 +37,10 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
 
                 <div class="splash" show.bind="isLoading">
-                    <div class="whirly-loader"></div>
+                    <div class="fa fa-spinner fa-spin fa-5x"></div>
                 </div>
 
                 <pager page-count.bind="pageCount"
