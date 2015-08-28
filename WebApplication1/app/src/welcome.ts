@@ -18,4 +18,8 @@ export class Welcome {
     submit() {
         this.security.signIn(this.firstName, this.lastName);
     } 
+
+    signOut() {
+        this.security.signOut();
+    }
 } 

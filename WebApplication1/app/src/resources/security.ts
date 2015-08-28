@@ -33,4 +33,16 @@ export default class Security {
         this.http.post("/api/auth/signIn", data)
             .then(result => self.isLoggedIn = result.content.isAuthenticated);
     }
+
+    signOut() {
+        var self = this;
+        this.http.get("/api/auth/signOut")
+            .then(result => self.isLoggedIn = false);
+    }
+
+    isAuthenticated() {
+        var self = this;
+        this.http.get("/api/auth/IsAuthenticated")
+            .then(result => self.isLoggedIn = result.content.isAuthenticated);
+    }
 } 

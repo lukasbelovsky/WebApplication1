@@ -7,12 +7,16 @@ import Security from './resources/security';
 @inject(Router, Security)
 export class App {
     router;
-    security : Security;
+    security: Security;
     constructor(router, security) {
         this.router = router;
         this.security = security;
         this.security.app = this;
-        this.reconfigureRoutes();       
+        this.reconfigureRoutes();  
+    }
+
+    activate() {
+        return this.security.isAuthenticated();
     }
 
     reconfigureRoutes() {
